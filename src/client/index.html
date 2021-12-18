@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kolby URL Shortener</title>
+        <link href="./app.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel|Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="main-container">
+                <h1>Welcome to Kolby's URL Shortener!</h1>
+                <h2>Use the textbox to type the original url for which a condensed url will be created</h2>
+                <div class="textbox-container">
+                    <form class="form" onkeypress="return event.keyCode != 13">
+                        <input #textInput id="textInput" type="text" class="form__textbox" placeholder="original url...">
+                    </form>
+                    <div class="button-container">
+                        <button onclick="shortenUrl(textInput.value)">submit</button>
+                    </div>
+                    <div class="shortened-url-container">
+                        <p id="shortenedUrl"></p>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
