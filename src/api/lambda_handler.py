@@ -62,8 +62,7 @@ def generateShortenedUrl():
         path = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
         original = executeQuery(path).get('Item', {}).get('original', {}).get('S', UNKNOWN_URL)
         if original == UNKNOWN_URL:
-            break
-    return path
+            return path
 
 # executes a dynamodb query based on the partition key (shortenedUrl) and maps the
 # response to the corresponding originalUrl 
