@@ -1,6 +1,9 @@
 const API_URI = 'https://tes7ayyf28.execute-api.us-east-1.amazonaws.com/v0/url-shortener';
 
 let shortenUrl = (originalUrl) => {
+    if (!originalUrl || !originalUrl.trim()) {
+        return;
+    }
     const data = {originalUrl: `${originalUrl}`}
     fetch(API_URI, {
         method: 'POST',
